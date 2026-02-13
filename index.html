@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-controller="interactive">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asta Frontier Group Limited</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav" data-interactive-target="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Asta Frontier</a>
+      <div class="nav-links" data-interactive-target="navLinks">
+        <a href="#solutions">Solutions</a>
+        <a href="#work">How We Work</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
+      </div>
+      <button class="nav-toggle" data-action="click->interactive#toggleMenu" data-interactive-target="navToggle">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content" data-interactive-target="parallax" data-speed="0.3">
+      <p class="hero-label">Technology Solutions</p>
+      <h1 class="hero-title" data-interactive-target="splitText">
+        We build the systems<br>that power your business
+      </h1>
+      <p class="hero-sub">
+        Commerce. Fintech. Logistics.<br>
+        Delivered as websites and mobile apps your customers actually enjoy using.
+      </p>
+      <div class="hero-actions">
+        <a href="#solutions" class="btn btn-primary">See Our Solutions</a>
+        <a href="#contact" class="btn btn-ghost">Start a Project</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" data-interactive-target="parallax" data-speed="-0.1">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <section class="marquee-strip">
+    <div class="marquee-track" data-interactive-target="marquee">
+      <span>Commerce</span>
+      <span class="marquee-dot"></span>
+      <span>Fintech</span>
+      <span class="marquee-dot"></span>
+      <span>Logistics</span>
+      <span class="marquee-dot"></span>
+      <span>Mobile Apps</span>
+      <span class="marquee-dot"></span>
+      <span>Web Platforms</span>
+      <span class="marquee-dot"></span>
+      <span>Payment Systems</span>
+      <span class="marquee-dot"></span>
+      <span>Commerce</span>
+      <span class="marquee-dot"></span>
+      <span>Fintech</span>
+      <span class="marquee-dot"></span>
+      <span>Logistics</span>
+      <span class="marquee-dot"></span>
+      <span>Mobile Apps</span>
+      <span class="marquee-dot"></span>
+      <span>Web Platforms</span>
+      <span class="marquee-dot"></span>
+      <span>Payment Systems</span>
+      <span class="marquee-dot"></span>
+    </div>
+  </section>
+
+  <section id="solutions" class="solutions">
+    <div class="container">
+      <div class="section-header" data-interactive-target="reveal">
+        <p class="section-label">What We Build</p>
+        <h2 class="section-title">Solutions that move<br>your business forward</h2>
+      </div>
+
+      <div class="solutions-grid">
+        <div class="solution-card" data-interactive-target="reveal">
+          <div class="solution-number">01</div>
+          <h3>Commerce Platforms</h3>
+          <p>Online stores, marketplaces and ordering systems that make buying and selling effortless for your customers — on the web and on their phones.</p>
+          <div class="solution-tags">
+            <span>Online Stores</span>
+            <span>Marketplaces</span>
+            <span>Order Management</span>
+          </div>
+        </div>
+
+        <div class="solution-card" data-interactive-target="reveal">
+          <div class="solution-number">02</div>
+          <h3>Fintech Solutions</h3>
+          <p>Payment processing, digital wallets and financial management tools that handle money securely and give your users full control of their finances.</p>
+          <div class="solution-tags">
+            <span>Payments</span>
+            <span>Digital Wallets</span>
+            <span>Financial Tools</span>
+          </div>
+        </div>
+
+        <div class="solution-card" data-interactive-target="reveal">
+          <div class="solution-number">03</div>
+          <h3>Logistics Systems</h3>
+          <p>Tracking, routing and delivery management platforms that let you and your customers know exactly where things are — in real time.</p>
+          <div class="solution-tags">
+            <span>Tracking</span>
+            <span>Route Planning</span>
+            <span>Delivery Management</span>
+          </div>
+        </div>
+
+        <div class="solution-card" data-interactive-target="reveal">
+          <div class="solution-number">04</div>
+          <h3>Custom Platforms</h3>
+          <p>Bespoke web and mobile applications built around how your business actually operates — not how off-the-shelf software thinks it should.</p>
+          <div class="solution-tags">
+            <span>Web Apps</span>
+            <span>Mobile Apps</span>
+            <span>Internal Tools</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-strip">
+    <div class="container">
+      <div class="feature-strip-inner" data-interactive-target="reveal">
+        <div class="feature-stat">
+          <span class="stat-number" data-interactive-target="counter" data-value="50">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Systems Delivered</span>
+        </div>
+        <div class="feature-divider"></div>
+        <div class="feature-stat">
+          <span class="stat-number" data-interactive-target="counter" data-value="30">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Businesses Served</span>
+        </div>
+        <div class="feature-divider"></div>
+        <div class="feature-stat">
+          <span class="stat-number" data-interactive-target="counter" data-value="5">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Building</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="process">
+    <div class="container">
+      <div class="process-layout">
+        <div class="process-left" data-interactive-target="parallax" data-speed="0.15">
+          <p class="section-label">How We Work</p>
+          <h2 class="section-title">From idea to<br>live product</h2>
+          <p class="process-desc">We take your business problem and turn it into a working system. No jargon, no unnecessary complexity — just software that does what you need it to do.</p>
+          <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+        </div>
+        <div class="process-right">
+          <div class="process-step" data-interactive-target="reveal">
+            <div class="step-marker">01</div>
+            <div class="step-content">
+              <h3>Understand</h3>
+              <p>We sit with you and learn how your business works, what your customers need, and where things can be better.</p>
+            </div>
+          </div>
+          <div class="process-step" data-interactive-target="reveal">
+            <div class="step-marker">02</div>
+            <div class="step-content">
+              <h3>Design</h3>
+              <p>We map out the solution — screens, flows and features — and walk you through it before a single line of code is written.</p>
+            </div>
+          </div>
+          <div class="process-step" data-interactive-target="reveal">
+            <div class="step-marker">03</div>
+            <div class="step-content">
+              <h3>Build</h3>
+              <p>We develop your web or mobile application, sharing progress with you regularly so there are never any surprises.</p>
+            </div>
+          </div>
+          <div class="process-step" data-interactive-target="reveal">
+            <div class="step-marker">04</div>
+            <div class="step-content">
+              <h3>Launch & Support</h3>
+              <p>We put your system in front of real users and stick around to make sure everything runs smoothly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-layout" data-interactive-target="reveal">
+        <div class="about-left">
+          <p class="section-label">About Us</p>
+          <h2 class="section-title">Built for businesses<br>that want to move fast</h2>
+        </div>
+        <div class="about-right">
+          <p>Asta Frontier Group Limited is a technology company that builds systems for businesses. We make commerce platforms, fintech tools, logistics software and custom applications — delivered as websites and mobile apps.</p>
+          <p>We work with companies that know they need technology but don't want to get bogged down in technical details. You tell us what your business needs. We build it, launch it and keep it running.</p>
+          <p>Our team handles everything from the first conversation to the finished product, so you always have one point of contact and zero confusion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-left" data-interactive-target="reveal">
+          <p class="section-label">Get in Touch</p>
+          <h2 class="section-title">Have a project<br>in mind?</h2>
+          <p class="contact-desc">Tell us what you're trying to build. We'll tell you how we can help — no strings attached.</p>
+          <div class="contact-info">
+            <a href="mailto:hello@astafrontier.com">hello@astafrontier.com</a>
+          </div>
+        </div>
+        <div class="contact-right" data-interactive-target="reveal">
+          <form class="contact-form" data-action="submit->interactive#handleForm">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <select name="service" required>
+                <option value="" disabled selected>What do you need?</option>
+                <option value="commerce">Commerce Platform</option>
+                <option value="fintech">Fintech Solution</option>
+                <option value="logistics">Logistics System</option>
+                <option value="custom">Custom Application</option>
+                <option value="other">Something Else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Tell us about your project" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">Asta Frontier</a>
+          <p>Building the systems that power your business.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#solutions">Solutions</a>
+          <a href="#work">How We Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Asta Frontier Group Limited. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@hotwired/stimulus/dist/stimulus.umd.js"></script>
+  <script src="interactive_controller.js"></script>
+</body>
+</html>
