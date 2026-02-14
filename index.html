@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-controller="interactive">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,148 +8,214 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
 
+  <div class="grain"></div> <!-- Navigation: HEY-style -->
   <nav class="nav" data-interactive-target="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Asta Frontier</a>
-      <div class="nav-links" data-interactive-target="navLinks">
-        <a href="#solutions">Solutions</a>
-        <a href="#work">How We Work</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav-cta">Get in Touch</a>
+      <div class="nav-brand">
+        <a href="#" class="brand-link">
+          <span class="brand-logo">Asta</span>
+          <span class="brand-text">Frontier</span>
+          <span class="brand-text">Group</span>
+        </a>
       </div>
-      <button class="nav-toggle" data-action="click->interactive#toggleMenu" data-interactive-target="navToggle">
-        <span></span>
-        <span></span>
-      </button>
+
+      <div class="nav-links-desktop">
+        <a href="#solutions" class="nav-link">Solutions</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#login" class="nav-link-secondary">Log in</a>
+        <a href="#start" class="nav-cta">Get Started</a>
+        <button class="nav-toggle" aria-label="Toggle Menu" data-interactive-target="navToggle"
+          data-action="click->interactive#toggleMenu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-mobile-menu" data-interactive-target="navLinks">
+      <a href="#solutions" class="mobile-link" data-action="click->interactive#toggleMenu">Solutions</a>
+      <a href="#process" class="mobile-link" data-action="click->interactive#toggleMenu">Process</a>
+      <a href="#about" class="mobile-link" data-action="click->interactive#toggleMenu">About</a>
+      <a href="#contact" class="mobile-link" data-action="click->interactive#toggleMenu">Contact</a>
+      <div class="mobile-actions">
+        <a href="#login" class="mobile-link-secondary">Log in</a>
+        <a href="#start" class="btn btn-primary btn-full">Get Started</a>
+      </div>
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-content" data-interactive-target="parallax" data-speed="0.3">
-      <p class="hero-label">Technology Solutions</p>
-      <h1 class="hero-title" data-interactive-target="splitText">
-        We build the systems<br>that power your business
-      </h1>
-      <p class="hero-sub">
-        Commerce. Fintech. Logistics.<br>
-        Delivered as websites and mobile apps your customers actually enjoy using.
-      </p>
-      <div class="hero-actions">
-        <a href="#solutions" class="btn btn-primary">See Our Solutions</a>
-        <a href="#contact" class="btn btn-ghost">Start a Project</a>
-      </div>
+  <section class="hero-captivating">
+    <div class="hero-visuals">
+      <!-- Abstract Geometry (CSS Animated) -->
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
     </div>
-    <div class="hero-scroll-indicator" data-interactive-target="parallax" data-speed="-0.1">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
+
+    <div class="hero-content-center">
+      <h1 class="hero-headline" data-interactive-target="splitText">
+        Software for the<br><em>Next Frontier</em>
+      </h1>
+      <p class="hero-subhead" data-interactive-target="reveal">
+        Build better, scale faster, and reclaim your time with Asta's human-centric tools for the modern web.
+      </p>
+      <div class="hero-actions" data-interactive-target="reveal">
+        <a href="#solutions" class="btn btn-primary btn-lg">Explore Solutions</a>
+        <a href="#about" class="btn btn-ghost btn-lg">Our Story</a>
+      </div>
     </div>
   </section>
 
   <section class="marquee-strip">
-    <div class="marquee-track" data-interactive-target="marquee">
+    <div class="marquee-track">
       <span>Commerce</span>
-      <span class="marquee-dot"></span>
-      <span>Fintech</span>
-      <span class="marquee-dot"></span>
+      <span class="marquee-dash"></span>
+      <span class="marquee-italic">Fintech</span>
+      <span class="marquee-dash"></span>
       <span>Logistics</span>
-      <span class="marquee-dot"></span>
-      <span>Mobile Apps</span>
-      <span class="marquee-dot"></span>
+      <span class="marquee-dash"></span>
+      <span class="marquee-italic">Mobile Apps</span>
+      <span class="marquee-dash"></span>
       <span>Web Platforms</span>
-      <span class="marquee-dot"></span>
-      <span>Payment Systems</span>
-      <span class="marquee-dot"></span>
+      <span class="marquee-dash"></span>
+      <span class="marquee-italic">Payment Systems</span>
+      <span class="marquee-dash"></span>
       <span>Commerce</span>
-      <span class="marquee-dot"></span>
-      <span>Fintech</span>
-      <span class="marquee-dot"></span>
+      <span class="marquee-dash"></span>
+      <span class="marquee-italic">Fintech</span>
+      <span class="marquee-dash"></span>
       <span>Logistics</span>
-      <span class="marquee-dot"></span>
-      <span>Mobile Apps</span>
-      <span class="marquee-dot"></span>
+      <span class="marquee-dash"></span>
+      <span class="marquee-italic">Mobile Apps</span>
+      <span class="marquee-dash"></span>
       <span>Web Platforms</span>
-      <span class="marquee-dot"></span>
-      <span>Payment Systems</span>
-      <span class="marquee-dot"></span>
+      <span class="marquee-dash"></span>
+      <span class="marquee-italic">Payment Systems</span>
+      <span class="marquee-dash"></span>
     </div>
   </section>
 
   <section id="solutions" class="solutions">
     <div class="container">
       <div class="section-header" data-interactive-target="reveal">
-        <p class="section-label">What We Build</p>
-        <h2 class="section-title">Solutions that move<br>your business forward</h2>
+        <div class="label-wrap">
+          <p class="section-label">What We Build</p>
+        </div>
+        <h2 class="section-title">Solutions that move<br>your business <em>forward</em></h2>
       </div>
 
       <div class="solutions-grid">
-        <div class="solution-card" data-interactive-target="reveal">
-          <div class="solution-number">01</div>
-          <h3>Commerce Platforms</h3>
-          <p>Online stores, marketplaces and ordering systems that make buying and selling effortless for your customers — on the web and on their phones.</p>
-          <div class="solution-tags">
-            <span>Online Stores</span>
-            <span>Marketplaces</span>
-            <span>Order Management</span>
+        <!-- Card 1: Commerce -->
+        <div class="sol-card wide" data-interactive-target="stagger" data-delay="0">
+          <div class="sol-card-content">
+            <span class="sol-num">01</span>
+            <h3 class="sol-title">Commerce<br><em>Platforms</em></h3>
+            <p class="sol-desc">Online stores, marketplaces and ordering systems that make buying and selling effortless
+              for your customers.</p>
+            <div class="solution-tags">
+              <span>Online Stores</span>
+              <span>Marketplaces</span>
+              <span>Order Management</span>
+            </div>
+          </div>
+          <div class="sol-visual">
+            <!-- Essential: Connection/Growth -->
+            <svg viewBox="0 0 100 100" fill="none" stroke="var(--accent)" stroke-width="1.5"
+              style="width:100%; height:100%; opacity: 0.8;">
+              <circle cx="30" cy="70" r="20" fill="var(--accent-secondary)" stroke="none" />
+              <circle cx="70" cy="30" r="15" fill="var(--accent-secondary)" stroke="none" />
+              <path d="M30 70 C 30 50, 70 50, 70 30" stroke-dasharray="4 4" />
+              <circle cx="30" cy="70" r="4" fill="var(--accent)" stroke="none" />
+              <circle cx="70" cy="30" r="4" fill="var(--accent)" stroke="none" />
+            </svg>
           </div>
         </div>
 
-        <div class="solution-card" data-interactive-target="reveal">
-          <div class="solution-number">02</div>
-          <h3>Fintech Solutions</h3>
-          <p>Payment processing, digital wallets and financial management tools that handle money securely and give your users full control of their finances.</p>
-          <div class="solution-tags">
-            <span>Payments</span>
-            <span>Digital Wallets</span>
-            <span>Financial Tools</span>
+        <!-- Card 2: Fintech -->
+        <div class="sol-card" data-interactive-target="stagger" data-delay="1">
+          <div class="sol-card-content">
+            <span class="sol-num">02</span>
+            <h3 class="sol-title">Fintech<br><em>Solutions</em></h3>
+            <p class="sol-desc">Payment processing and digital wallets that handle money securely.</p>
+            <div class="solution-tags">
+              <span>Payments</span>
+              <span>Wallets</span>
+            </div>
+          </div>
+          <div class="sol-visual">
+            <!-- Essential: Flow/Exchange -->
+            <svg viewBox="0 0 100 100" fill="none" stroke="var(--accent)" stroke-width="1.5"
+              style="width:100%; height:100%; opacity: 0.8;">
+              <rect x="20" y="30" width="40" height="25" rx="4" fill="var(--accent-secondary)" stroke="none" />
+              <rect x="40" y="45" width="40" height="25" rx="4" fill="var(--white)" stroke="var(--border)" />
+              <path d="M60 45 V 30" stroke-width="1" />
+              <circle cx="60" cy="30" r="3" fill="var(--accent)" stroke="none" />
+            </svg>
           </div>
         </div>
 
-        <div class="solution-card" data-interactive-target="reveal">
-          <div class="solution-number">03</div>
-          <h3>Logistics Systems</h3>
-          <p>Tracking, routing and delivery management platforms that let you and your customers know exactly where things are — in real time.</p>
-          <div class="solution-tags">
-            <span>Tracking</span>
-            <span>Route Planning</span>
-            <span>Delivery Management</span>
+        <!-- Card 3: Logistics -->
+        <div class="sol-card" data-interactive-target="stagger" data-delay="2">
+          <div class="sol-card-content">
+            <span class="sol-num">03</span>
+            <h3 class="sol-title">Logistics<br><em>Systems</em></h3>
+            <p class="sol-desc">Tracking, routing and delivery management platforms.</p>
+            <div class="solution-tags">
+              <span>Tracking</span>
+              <span>Routing</span>
+            </div>
+          </div>
+          <div class="sol-visual">
+            <!-- Essential: Path/Direction -->
+            <svg viewBox="0 0 100 100" fill="none" stroke="var(--accent)" stroke-width="1.5"
+              style="width:100%; height:100%; opacity: 0.8;">
+              <path d="M20 80 Q 50 80 50 50 T 80 20" />
+              <circle cx="20" cy="80" r="4" fill="var(--accent)" stroke="none" />
+              <circle cx="80" cy="20" r="4" fill="var(--white)" stroke="var(--accent)" />
+              <circle cx="50" cy="50" r="25" stroke="var(--accent-secondary)" stroke-width="12" stroke-opacity="0.3"
+                fill="none" />
+            </svg>
           </div>
         </div>
 
-        <div class="solution-card" data-interactive-target="reveal">
-          <div class="solution-number">04</div>
-          <h3>Custom Platforms</h3>
-          <p>Bespoke web and mobile applications built around how your business actually operates — not how off-the-shelf software thinks it should.</p>
-          <div class="solution-tags">
-            <span>Web Apps</span>
-            <span>Mobile Apps</span>
-            <span>Internal Tools</span>
+        <!-- Card 4: Custom -->
+        <div class="sol-card wide" data-interactive-target="stagger" data-delay="3">
+          <div class="sol-card-content">
+            <span class="sol-num">04</span>
+            <h3 class="sol-title">Custom<br><em>Platforms</em></h3>
+            <p class="sol-desc">Bespoke web and mobile applications built around how your business actually operates.
+            </p>
+            <div class="solution-tags">
+              <span>Web Apps</span>
+              <span>Mobile Apps</span>
+              <span>Internal Tools</span>
+            </div>
+          </div>
+          <div class="sol-visual">
+            <!-- Essential: Structure/Build -->
+            <svg viewBox="0 0 100 100" fill="none" stroke="var(--accent)" stroke-width="1.5"
+              style="width:100%; height:100%; opacity: 0.8;">
+              <rect x="25" y="25" width="20" height="20" rx="4" fill="var(--accent-secondary)" stroke="none" />
+              <rect x="55" y="25" width="20" height="20" rx="4" stroke="var(--border)" />
+              <rect x="25" y="55" width="20" height="20" rx="4" stroke="var(--border)" />
+              <rect x="55" y="55" width="20" height="20" rx="4" fill="var(--accent)" stroke="none" />
+            </svg>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="feature-strip">
-    <div class="container">
-      <div class="feature-strip-inner" data-interactive-target="reveal">
-        <div class="feature-stat">
-          <span class="stat-number" data-interactive-target="counter" data-value="50">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Systems Delivered</span>
-        </div>
-        <div class="feature-divider"></div>
-        <div class="feature-stat">
-          <span class="stat-number" data-interactive-target="counter" data-value="30">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Businesses Served</span>
-        </div>
-        <div class="feature-divider"></div>
-        <div class="feature-stat">
-          <span class="stat-number" data-interactive-target="counter" data-value="5">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Years Building</span>
-        </div>
       </div>
     </div>
   </section>
@@ -156,40 +223,50 @@
   <section id="work" class="process">
     <div class="container">
       <div class="process-layout">
-        <div class="process-left" data-interactive-target="parallax" data-speed="0.15">
-          <p class="section-label">How We Work</p>
-          <h2 class="section-title">From idea to<br>live product</h2>
-          <p class="process-desc">We take your business problem and turn it into a working system. No jargon, no unnecessary complexity — just software that does what you need it to do.</p>
+        <div class="process-left" data-interactive-target="reveal">
+          <div class="label-wrap">
+            <p class="section-label">How We Work</p>
+          </div>
+          <h2 class="section-title">From your idea<br>to a live <em>product</em></h2>
+          <p class="process-desc">We take your business problem and turn it into a working system. No jargon, no
+            unnecessary complexity — just software that does what you need it to do.</p>
           <a href="#contact" class="btn btn-primary">Start a Conversation</a>
         </div>
         <div class="process-right">
-          <div class="process-step" data-interactive-target="reveal">
-            <div class="step-marker">01</div>
-            <div class="step-content">
+          <div class="process-step" data-interactive-target="stagger" data-delay="0">
+            <div class="step-accent"></div>
+            <div class="step-head">
+              <span class="step-number">01</span>
               <h3>Understand</h3>
-              <p>We sit with you and learn how your business works, what your customers need, and where things can be better.</p>
             </div>
+            <p>We sit with you and learn how your business works, what your customers need, and where things can be
+              better.</p>
           </div>
-          <div class="process-step" data-interactive-target="reveal">
-            <div class="step-marker">02</div>
-            <div class="step-content">
+          <div class="process-step" data-interactive-target="stagger" data-delay="1">
+            <div class="step-accent"></div>
+            <div class="step-head">
+              <span class="step-number">02</span>
               <h3>Design</h3>
-              <p>We map out the solution — screens, flows and features — and walk you through it before a single line of code is written.</p>
             </div>
+            <p>We map out the solution — screens, flows and features — and walk you through it before a single line of
+              code is written.</p>
           </div>
-          <div class="process-step" data-interactive-target="reveal">
-            <div class="step-marker">03</div>
-            <div class="step-content">
+          <div class="process-step" data-interactive-target="stagger" data-delay="2">
+            <div class="step-accent"></div>
+            <div class="step-head">
+              <span class="step-number">03</span>
               <h3>Build</h3>
-              <p>We develop your web or mobile application, sharing progress with you regularly so there are never any surprises.</p>
             </div>
+            <p>We develop your web or mobile application, sharing progress with you regularly so there are never any
+              surprises.</p>
           </div>
-          <div class="process-step" data-interactive-target="reveal">
-            <div class="step-marker">04</div>
-            <div class="step-content">
+          <div class="process-step" data-interactive-target="stagger" data-delay="3">
+            <div class="step-accent"></div>
+            <div class="step-head">
+              <span class="step-number">04</span>
               <h3>Launch & Support</h3>
-              <p>We put your system in front of real users and stick around to make sure everything runs smoothly.</p>
             </div>
+            <p>We put your system in front of real users and stick around to make sure everything runs smoothly.</p>
           </div>
         </div>
       </div>
@@ -197,16 +274,26 @@
   </section>
 
   <section id="about" class="about">
-    <div class="container">
-      <div class="about-layout" data-interactive-target="reveal">
-        <div class="about-left">
-          <p class="section-label">About Us</p>
-          <h2 class="section-title">Built for businesses<br>that want to move fast</h2>
-        </div>
-        <div class="about-right">
-          <p>Asta Frontier Group Limited is a technology company that builds systems for businesses. We make commerce platforms, fintech tools, logistics software and custom applications — delivered as websites and mobile apps.</p>
-          <p>We work with companies that know they need technology but don't want to get bogged down in technical details. You tell us what your business needs. We build it, launch it and keep it running.</p>
-          <p>Our team handles everything from the first conversation to the finished product, so you always have one point of contact and zero confusion.</p>
+    <div class="about-inner">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-left" data-interactive-target="reveal">
+            <div class="label-wrap">
+              <p class="section-label section-label-light">About Us</p>
+            </div>
+            <h2 class="section-title about-title">Built for businesses that want to <em>move fast</em></h2>
+          </div>
+          <div class="about-right" data-interactive-target="reveal">
+            <div class="about-quote">&ldquo;</div>
+            <p class="about-lead">Asta Frontier Group Limited is a technology company that builds systems for
+              businesses.</p>
+            <p>We make commerce platforms, fintech tools, logistics software and custom applications — delivered as
+              websites and mobile apps.</p>
+            <p>We work with companies that know they need technology but don't want to get bogged down in technical
+              details. You tell us what your business needs. We build it, launch it and keep it running.</p>
+            <p>Our team handles everything from the first conversation to the finished product, so you always have one
+              point of contact and zero confusion.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -216,24 +303,32 @@
     <div class="container">
       <div class="contact-layout">
         <div class="contact-left" data-interactive-target="reveal">
-          <p class="section-label">Get in Touch</p>
-          <h2 class="section-title">Have a project<br>in mind?</h2>
-          <p class="contact-desc">Tell us what you're trying to build. We'll tell you how we can help — no strings attached.</p>
+          <div class="label-wrap">
+            <p class="section-label">Get in Touch</p>
+          </div>
+          <h2 class="section-title contact-title">Have a project<br>in <em>mind</em>?</h2>
+          <p class="contact-desc">Tell us what you're trying to build. We'll tell you how we can help — no strings
+            attached.</p>
           <div class="contact-info">
             <a href="mailto:hello@astafrontier.com">hello@astafrontier.com</a>
           </div>
         </div>
         <div class="contact-right" data-interactive-target="reveal">
           <form class="contact-form" data-action="submit->interactive#handleForm">
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Your Name" required>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" required>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+              </div>
             </div>
             <div class="form-group">
-              <input type="email" name="email" placeholder="Email Address" required>
-            </div>
-            <div class="form-group">
+              <label>What do you need?</label>
               <select name="service" required>
-                <option value="" disabled selected>What do you need?</option>
+                <option value="" disabled selected>Select a service</option>
                 <option value="commerce">Commerce Platform</option>
                 <option value="fintech">Fintech Solution</option>
                 <option value="logistics">Logistics System</option>
@@ -242,7 +337,8 @@
               </select>
             </div>
             <div class="form-group">
-              <textarea name="message" placeholder="Tell us about your project" rows="4" required></textarea>
+              <label>Tell us about your project</label>
+              <textarea name="message" rows="4" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full">Send Message</button>
           </form>
@@ -253,20 +349,34 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-inner">
+      <div class="footer-top">
         <div class="footer-brand">
-          <a href="#" class="nav-logo">Asta Frontier</a>
-          <p>Building the systems that power your business.</p>
+          <a href="#" class="footer-logo">Asta<br>Frontier<span class="logo-dot"></span></a>
         </div>
-        <div class="footer-links">
-          <a href="#solutions">Solutions</a>
-          <a href="#work">How We Work</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+        <div class="footer-nav">
+          <div class="footer-col">
+            <p class="footer-heading">Navigation</p>
+            <a href="#solutions">Solutions</a>
+            <a href="#work">Process</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-heading">Solutions</p>
+            <a href="#solutions">Commerce</a>
+            <a href="#solutions">Fintech</a>
+            <a href="#solutions">Logistics</a>
+            <a href="#solutions">Custom</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-heading">Connect</p>
+            <a href="mailto:hello@astafrontier.com">Email</a>
+          </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 Asta Frontier Group Limited. All rights reserved.</p>
-        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Asta Frontier Group Limited</p>
+        <p>Building systems that work.</p>
       </div>
     </div>
   </footer>
@@ -274,4 +384,5 @@
   <script src="https://unpkg.com/@hotwired/stimulus/dist/stimulus.umd.js"></script>
   <script src="interactive_controller.js"></script>
 </body>
+
 </html>
